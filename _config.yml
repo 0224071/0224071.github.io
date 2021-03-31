@@ -8,17 +8,19 @@ subtitle: ''
 description: 'Make yourself better'
 keywords:
 author: Peter Chuang
-language: zg-TW
+language: 
+- zh-TW
+- en
 timezone: 'Asia/Taipei'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://0224071.github.io/
+url: https://0224071.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -67,8 +69,8 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: 
+tag_map: tags
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
