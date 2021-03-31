@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zg-TW">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -51,16 +51,16 @@
         <header>
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Peter&#39;s Blog</a></div>
+            <div class="navbar-header header-logo"><a href="/">Peter 的部落格</a></div>
             <div class="menu navbar-right">
                 
-                    <a class="menu-item" href="/archives">Posts</a>
+                    <a class="menu-item" href="/archives">文章</a>
                 
-                    <a class="menu-item" href="/category">Categories</a>
+                    <a class="menu-item" href="/category">分類</a>
                 
-                    <a class="menu-item" href="/tag">Tags</a>
+                    <a class="menu-item" href="/tag">標籤</a>
                 
-                    <a class="menu-item" href="/about">About</a>
+                    <a class="menu-item" href="/about">關於</a>
                 
                 <input id="switch_default" type="checkbox" class="switch_default">
                 <label for="switch_default" class="toggleBtn"></label>
@@ -73,19 +73,19 @@
         <div class="container">
             <div class="navbar-header">
                 <div>
-                    <a href="/">Peter&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                    <a href="/">Peter 的部落格</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
                 </div>
                 <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
             </div>
             <div class="menu" id="mobile-menu">
                 
-                    <a class="menu-item" href="/archives">Posts</a>
+                    <a class="menu-item" href="/archives">文章</a>
                 
-                    <a class="menu-item" href="/category">Categories</a>
+                    <a class="menu-item" href="/category">分類</a>
                 
-                    <a class="menu-item" href="/tag">Tags</a>
+                    <a class="menu-item" href="/tag">標籤</a>
                 
-                    <a class="menu-item" href="/about">About</a>
+                    <a class="menu-item" href="/about">關於</a>
                 
             </div>
         </div>
@@ -113,9 +113,9 @@
     <div class="tocbot-list">
     </div>
     <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
+        <a class="tocbot-toc-expand" onclick="expand_toc()">展開</a>
+        <a onclick="go_top()">回到頂層</a>
+        <a onclick="go_bottom()">到底部</a>
     </div>
 </div>
 
@@ -144,7 +144,7 @@
             scrollSmooth: true,
         });
         b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
+        b.innerHTML = "收合"
     }
 
     function collapse_toc() {
@@ -158,7 +158,7 @@
             scrollSmooth: true,
         });
         b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
+        b.innerHTML = "展開"
     }
 
     function go_top() {
@@ -179,14 +179,22 @@
             
                 <div class="post-meta">
                     
-                        Author: <a itemprop="author" rel="author" href="/">Peter Chuang</a>
+                        作者: <a itemprop="author" rel="author" href="/">Peter Chuang</a>
                     
 
                     
+                        
                         <span class="post-time">
-                        Date: <a href="#">March 31, 2021&nbsp;&nbsp;15:19:48</a>
+                        日期: <a href="#">2021/03/31&nbsp;&nbsp;15:19:48</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    分類:
+                            
+                                <a href="/categories/Blog/">Blog</a>
+                            
+                        </span>
                     
                 </div>
             
@@ -194,7 +202,7 @@
 
         <div class="post-content">
             <h1 id="建立部落格"><a href="#建立部落格" class="headerlink" title="建立部落格"></a>建立部落格</h1><p>主要紀錄第一次使用 Hexo 和 Github 建立部落格的過程</p>
-<h2 id="事前準備"><a href="#事前準備" class="headerlink" title="事前準備"></a>事前準備</h2><ol>
+<h2 id="事前準備"><a href="#事前準備" class="headerlink" title="事前準備"></a>事前準備</h2><ul>
 <li><p>所需環境</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://nodejs.org/dist/v14.16.0/node-v14.16.0-x64.msi">Node JS</a></li>
@@ -207,7 +215,7 @@
 <li>hexo-deployer-git</li>
 </ul>
 </li>
-</ol>
+</ul>
 <h2 id="建置"><a href="#建置" class="headerlink" title="建置"></a>建置</h2><ul>
 <li><p>GitHub 服務端</p>
 <p>建立 GitHub 帳號，並新增以自己帳號為名稱的 Repository &gt; 例: <code>&lt;UserName&gt;</code>.github.io</p>
@@ -217,63 +225,42 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>安裝完後執行下列指令,便可至 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 觀看是否建置成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;ReopName&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;ReopName&gt;</span><br><span class="line">$ hexo clean <span class="comment">#清除已產生的靜態檔案</span></span><br><span class="line">$ hexo generate <span class="comment">#產生靜態檔案</span></span><br><span class="line">$ hexo server <span class="comment">#啟動伺服器，預設是 http://localhost:4000/。</span></span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/one-command-deployment">部屬至 GitHub Pages</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;ReopName&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;ReopName&gt;</span><br><span class="line">$ hexo clean <span class="comment">#清除已產生的靜態檔案</span></span><br><span class="line">$ hexo generate <span class="comment">#產生靜態檔案</span></span><br><span class="line">$ hexo server <span class="comment">#啟動伺服器，預設是 http://localhost:4000/。</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="部屬"><a href="#部屬" class="headerlink" title="部屬"></a>部屬</h2><p>根據[官方文件]說明</p>
 <p>先至 <code>_config.yml</code> 的 <code>deploy</code> 修改設定</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: &lt;repository url&gt; <span class="comment">#https://github.com/&lt;UserName&gt;/&lt;UserName&gt;.github.io</span></span><br><span class="line">  branch: gh-pages</span><br><span class="line">  message: hexo deploy</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">&#x27;Build Hexo&#x27;</span></span><br><span class="line">$ git remote add origin https://github.com/&lt;UserName&gt;/&lt;UserName&gt;.github.io</span><br><span class="line">$ git push -f  <span class="comment">#強制覆蓋 GitHub 遠端倉庫 做備份</span></span><br><span class="line">$ hexo deploy  <span class="comment">#一鍵部屬，可至 gh-pages 上觀看是否成功</span></span><br></pre></td></tr></table></figure></li>
-</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">&#x27;Build Hexo&#x27;</span></span><br><span class="line">$ git remote add origin https://github.com/&lt;UserName&gt;/&lt;UserName&gt;.github.io</span><br><span class="line">$ git push -f  <span class="comment">#強制覆蓋 GitHub 遠端倉庫 做備份</span></span><br><span class="line">$ hexo deploy  <span class="comment">#一鍵部屬，可至 gh-pages 上觀看是否成功</span></span><br></pre></td></tr></table></figure>
 
         </div>
 
         
-            <section class="post-copyright">
-                
-                    <p class="copyright-item">
-                        <span>Author:</span>
-                        <span>Peter Chuang</span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>Permalink:</span>
-                        <span><a href="https://0224071.github.io/2021/03/31/%E5%BB%BA%E7%AB%8B%E9%83%A8%E8%90%BD%E6%A0%BC/">https://0224071.github.io/2021/03/31/%E5%BB%BA%E7%AB%8B%E9%83%A8%E8%90%BD%E6%A0%BC/</a></span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
-                     </p>
-                
-
-            </section>
-        
         <section class="post-tags">
             <div>
-                <span>Tag(s):</span>
+                <span>標籤:</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/"># 部落格</a>
+                    
+                        <a href="/tags/Hexo/"># Hexo</a>
+                    
+                        <a href="/tags/GitHub/"># GitHub</a>
+                    
+                        <a href="/tags/%E5%AD%B8%E7%BF%92/"># 學習</a>
+                    
+                        
                 </span>
             </div>
             <div>
-                <a href="javascript:window.history.back();">back</a>
+                <a href="javascript:window.history.back();">上一頁</a>
                 <span>· </span>
-                <a href="/">home</a>
+                <a href="/">首頁</a>
             </div>
         </section>
         <section class="post-nav">
             
-            
-            <a class="next" rel="next" href="/2021/03/31/hello-world/">Hello World</a>
             
         </section>
 
@@ -284,7 +271,7 @@
         </div>
         <footer id="footer" class="footer">
     <div class="copyright">
-        <span>© Peter Chuang | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+        <!-- <span>© Peter Chuang | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span> -->
     </div>
 </footer>
 

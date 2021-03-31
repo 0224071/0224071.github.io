@@ -734,6 +734,9 @@ header label {
 .dark-theme .post-wrap .post-meta a:hover {
   color: #fff;
 }
+.post-wrap .post-meta span {
+  margin-left: 8px;
+}
 .post-content {
   padding-top: 2rem;
   text-align: justify;
