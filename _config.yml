@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Peter's Blog
 subtitle: ''
-description: ''
+description: 'Make yourself better'
 keywords:
-author: John Doe
-language: en
-timezone: ''
+author: Peter Chuang
+language: zg-TW
+timezone: 'Asia/Taipei'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://0224071.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -102,4 +102,7 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: github
+  repo: https://github.com/0224071/0224071.github.io.git
+  branch: main
+  message: hexo deploy
